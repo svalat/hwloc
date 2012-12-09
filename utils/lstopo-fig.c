@@ -65,7 +65,7 @@ fig_declare_color(void *output_, int r, int g, int b)
 }
 
 static void
-fig_box(void *output_, int r, int g, int b, unsigned depth, unsigned x, unsigned width, unsigned y, unsigned height)
+fig_box(void *output_, int r, int g, int b, unsigned depth, unsigned x, unsigned width, unsigned y, unsigned height,hwloc_obj_t level)
 {
   FILE *output = output_;
   x *= FIG_FACTOR;
@@ -96,7 +96,7 @@ fig_line(void *output_, int r, int g, int b, unsigned depth, unsigned x1, unsign
 }
 
 static void
-fig_text(void *output_, int r, int g, int b, int size, unsigned depth, unsigned x, unsigned y, const char *text)
+fig_text(void *output_, int r, int g, int b, int size, unsigned depth, unsigned x, unsigned y, const char *text,hwloc_obj_t level)
 {
   FILE *output = output_;
   unsigned len = strlen(text);

@@ -584,7 +584,7 @@ merge(struct display *disp, int x, int y, int or, int andnot, int r, int g, int 
 
 /* Now we can implement the standard drawing helpers */
 static void
-text_box(void *output, int r, int g, int b, unsigned depth __hwloc_attribute_unused, unsigned x1, unsigned width, unsigned y1, unsigned height)
+text_box(void *output, int r, int g, int b, unsigned depth __hwloc_attribute_unused, unsigned x1, unsigned width, unsigned y1, unsigned height,hwloc_obj_t level)
 {
   struct display *disp = output;
   unsigned i, j;
@@ -672,7 +672,7 @@ text_line(void *output, int r __hwloc_attribute_unused, int g __hwloc_attribute_
 }
 
 static void
-text_text(void *output, int r, int g, int b, int size __hwloc_attribute_unused, unsigned depth __hwloc_attribute_unused, unsigned x, unsigned y, const char *text)
+text_text(void *output, int r, int g, int b, int size __hwloc_attribute_unused, unsigned depth __hwloc_attribute_unused, unsigned x, unsigned y, const char *text,hwloc_obj_t level)
 {
   struct display *disp = output;
   x /= (gridsize/2);
