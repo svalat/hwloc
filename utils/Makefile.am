@@ -19,7 +19,7 @@ if HWLOC_BUILD_UTILS
 bin_PROGRAMS = lstopo-no-graphics hwloc-assembler hwloc-calc hwloc-bind hwloc-distances hwloc-distrib hwloc-ps
 endif
 
-lstopo_no_graphics_SOURCES = lstopo.h lstopo.c lstopo-color.c lstopo-text.c lstopo-draw.c lstopo-fig.c lstopo-xml.c
+lstopo_no_graphics_SOURCES = lstopo.h lstopo.c lstopo-color.c lstopo-text.c lstopo-draw.c lstopo-fig.c lstopo-xml.c lstopo-native-svg.c
 lstopo_no_graphics_CFLAGS = $(HWLOC_LIBXML2_CFLAGS) $(HWLOC_PCI_CFLAGS)
 lstopo_no_graphics_LDADD = $(LDADD) -lm $(HWLOC_TERMCAP_LIBS)
 if HWLOC_BUILD_UTILS
