@@ -9,7 +9,7 @@ dnl Copyright © 2004-2005 The Regents of the University of California.
 dnl                         All rights reserved.
 dnl Copyright © 2004-2008 High Performance Computing Center Stuttgart,
 dnl                         University of Stuttgart.  All rights reserved.
-dnl Copyright © 2010-2015 Inria.  All rights reserved.
+dnl Copyright © 2010-2016 Inria.  All rights reserved.
 dnl Copyright © 2006-2014 Cisco Systems, Inc.  All rights reserved.
 dnl
 dnl See COPYING in top-level directory.
@@ -94,11 +94,6 @@ AC_DEFUN([HWLOC_DEFINE_ARGS],[
     AC_ARG_ENABLE([gl],
 		  AS_HELP_STRING([--disable-gl],
 				 [Disable the GL display device discovery]))
-
-    # Linux libnuma
-    AC_ARG_ENABLE([libnuma],
-                  AS_HELP_STRING([--disable-libnuma],
-                                 [Disable the Linux libnuma]))
 
     # LibUdev
     AC_ARG_ENABLE([libudev],
